@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.mustafaiev.tair.dressin.widget.propositioncardslist.PropositionCardLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal|top">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:orientation="horizontal">
+        <Space
+            android:layout_height="match_parent"
+            android:layout_width="0dip"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <View
+        android:id="@+id/hairline"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#28ffffff"/>
+    <FrameLayout
+        android:id="@+id/info_area"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:paddingLeft="16dp"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:background="@android:color/background_dark">
+            <TextView android:id="@+id/label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/alarm_label_not_caps"
+                android:textColor="@color/clock_gray"
+                android:ellipsize="end"
+                android:singleLine="true"/>
+            <TextView android:id="@+id/daysOfWeek"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                style="@style/alarm_label_bold"
+                android:textColor="@color/clock_white"
+                android:ellipsize="none"
+                android:singleLine="true"/>
+    </FrameLayout>
+    <LinearLayout
+        android:id="@+id/expand_area"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/edit_label"
+            style="@style/body_not_caps"
+            android:gravity="center_vertical"
+            android:textColor="@color/clock_gray"
+            android:hint="Label"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:background="@drawable/item_background"/>
+        <CheckBox
+            android:id="@+id/repeat_onoff"
+            android:text="Repeat"
+            android:layout_height="48dp"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="16dp"
+            android:layout_gravity="center_vertical"
+            style="@style/body"
+            android:textColor="@color/clock_white"/>
+        <LinearLayout
+            android:id="@+id/repeat_days"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="top"
+            android:orientation="horizontal"
+            android:visibility="gone">
+            <!-- Day buttons are put here programatically -->
+        </LinearLayout>
+        <View
+            android:id="@+id/hairline"
+            android:layout_height="1dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_width="match_parent"
+            android:background="#28ffffff"/>
+        <FrameLayout
+            android:id="@+id/collapse"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:background="@drawable/item_background"
+            android:clickable="true"
+            android:contentDescription="Colapse"
+            >
+        </FrameLayout>
+    </LinearLayout>
+
+</com.mustafaiev.tair.dressin.widget.propositioncardslist.PropositionCardLayout>

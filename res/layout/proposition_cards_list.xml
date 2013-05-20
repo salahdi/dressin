@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/weather_container"
+        android:layout_width="match_parent"
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/white"
+        android:layout_height="150dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="City"
+            android:id="@+id/weather_city"
+            android:textSize="20sp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:id="@+id/weather_date"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_alignTop="@id/weather_city"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:id="@+id/weather_desc"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_alignTop="@id/weather_date"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:src="@drawable/di_icon_hdpi"
+            android:layout_height="50dp"
+            android:id="@+id/weather_image"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="25dp"
+            android:layout_alignTop="@id/weather_desc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="50sp"
+            android:id="@+id/weather_temperature"
+            android:layout_alignLeft="@id/weather_image"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="23dp"
+            android:layout_alignTop="@id/weather_desc"
+            android:textColor="#222f27" />
+
+    </RelativeLayout>
+
+
+    <com.mustafaiev.tair.dressin.widget.propositioncardslist.PropositionCardsListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:descendantFocusability="beforeDescendants"
+        android:divider="@null"
+        android:dividerHeight="6dp"
+        android:layout_marginTop="170dp" />
+
+</FrameLayout>

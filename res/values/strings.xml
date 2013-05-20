@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Dressin</string>
+    <string name="title_me_tab">Me</string>
+    <string name="title_friends_tab">Friends</string>
+    <string name="data_is_loading">Loading...</string>
+    <string name="data_is_loading_wait">Please Wait</string>
+
+</resources>
